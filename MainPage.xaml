@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.MainPage">
+    <ContentPage.Content>
+        <ListView x:Name="MainListView" 
+                          HasUnevenRows="True"  
+                          BackgroundColor="GreenYellow"
+                          >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid BackgroundColor="Bisque" HeightRequest="15"/>
+                            <StackLayout BackgroundColor="Red" 
+                                     Orientation="Vertical" 
+                                     Padding="10,10,10,10">
+                                <Entry Text="Testing"/>
+                                <label TextColor="Blue"  Text="{Binding Name}"></label>
+                                <label TextColor="Blue" Text="{Binding Age}"></label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
